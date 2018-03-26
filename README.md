@@ -10,3 +10,7 @@
 # Libraries
 
 TBD
+
+# Understanding Web Dev
+
+- [URLs from Node](https://nodejs.org/api/url.html#url_constructor_new_url_input_base)
