@@ -1,0 +1,12 @@
+/*
+CSS Sizes:
+https://www.w3schools.com/cssref/css_units.asp
+*/
+
+#random-string {
+	font-size: 7rem;
+	color: red;
+	text-align: center;
+	font-weight: 900;
+	font-family: 'Archivo Narrow', sans-serif;
+}
