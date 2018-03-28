@@ -52,7 +52,7 @@ class Calculator {
 
   static convertKeyboardInput(keyCode) {
     /**
-     * TODO: IMPLEMENT THIS METHOD BY LOOKING AT ASCII CODES
+     * TODO: IMPLEMENT THIS METHOD BY LOOKING AT ASCII CODES OR KEYBOARD EVENTS WHEN NEEDED
      * */
     throw new Error('NotImplementedError: convertKeyboardInput');
   }

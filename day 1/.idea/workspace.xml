@@ -11,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
@@ -21,13 +21,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calculator.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/calculator.js">
+      <file leaf-file-name="calculator2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculator2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2899">
-              <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+            <state relative-caret-position="380">
+              <caret line="146" column="3" lean-forward="true" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
               <folding>
-                <element signature="e#917#991#0" expanded="true" />
+                <element signature="n#!!doc;n#getDisplayedNumber#0;n#Calc#0" expanded="true" />
+                <element signature="n#!!doc;n#receiveInput#0;n#Calc#0" expanded="true" />
+                <element signature="n#!!doc;n#_isNumberInput#0;n#Calc#0" expanded="true" />
+                <element signature="n#!!doc;n#_handleNumberInput#0;n#Calc#0" expanded="true" />
+                <element signature="n#!!doc;n#OP#0;n#Calc#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,14 +40,31 @@
       <file leaf-file-name="calculator_test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculator_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+            <state relative-caret-position="1638">
+              <caret line="117" column="27" lean-forward="true" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc;n#test01#0;n#CalculatorTest#0" expanded="true" />
                 <element signature="n#!!doc;n#test02#0;n#CalculatorTest#0" expanded="true" />
                 <element signature="n#!!doc;n#test03#0;n#CalculatorTest#0" expanded="true" />
                 <element signature="n#!!doc;n#test04#0;n#CalculatorTest#0" expanded="true" />
+                <element signature="n#!!doc;n#test05#0;n#CalculatorTest#0" expanded="true" />
+                <element signature="n#!!doc;n#test07#0;n#CalculatorTest#0" expanded="true" />
+                <element signature="e#2520#2590#0" expanded="true" />
+                <element signature="e#2622#2688#0" expanded="true" />
                 <element signature="n#!!doc;n#getAllTests#0;n#CalculatorTest#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calculator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+              <folding>
+                <element signature="e#15#79#0" expanded="true" />
+                <element signature="e#917#1022#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,6 +98,11 @@
       <find>STATE.</find>
       <find>console.log</find>
       <find>this.blocks</find>
+      <find>,</find>
+      <find>true</find>
+      <find>Cal</find>
+      <find>8139</find>
+      <find>conso</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -84,8 +110,9 @@
       <list>
         <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/calculator_test.js" />
         <option value="$PROJECT_DIR$/calculator.js" />
+        <option value="$PROJECT_DIR$/calculator2.js" />
+        <option value="$PROJECT_DIR$/calculator_test.js" />
       </list>
     </option>
   </component>
@@ -146,7 +173,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RunDashboard">
@@ -188,12 +215,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522115118790</updated>
-      <workItem from="1522115121976" duration="14753000" />
+      <workItem from="1522115121976" duration="23384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14753000" />
+    <option name="totallyTimeSpent" value="23384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
@@ -242,16 +269,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/calculator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding>
+            <element signature="e#15#79#0" expanded="true" />
+            <element signature="e#917#1022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/calculator_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        <state relative-caret-position="1638">
+          <caret line="117" column="27" lean-forward="true" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc;n#test01#0;n#CalculatorTest#0" expanded="true" />
             <element signature="n#!!doc;n#test02#0;n#CalculatorTest#0" expanded="true" />
             <element signature="n#!!doc;n#test03#0;n#CalculatorTest#0" expanded="true" />
             <element signature="n#!!doc;n#test04#0;n#CalculatorTest#0" expanded="true" />
+            <element signature="n#!!doc;n#test05#0;n#CalculatorTest#0" expanded="true" />
+            <element signature="n#!!doc;n#test07#0;n#CalculatorTest#0" expanded="true" />
+            <element signature="e#2520#2590#0" expanded="true" />
+            <element signature="e#2622#2688#0" expanded="true" />
             <element signature="n#!!doc;n#getAllTests#0;n#CalculatorTest#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculator2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="146" column="3" lean-forward="true" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc;n#getDisplayedNumber#0;n#Calc#0" expanded="true" />
+            <element signature="n#!!doc;n#receiveInput#0;n#Calc#0" expanded="true" />
+            <element signature="n#!!doc;n#_isNumberInput#0;n#Calc#0" expanded="true" />
+            <element signature="n#!!doc;n#_handleNumberInput#0;n#Calc#0" expanded="true" />
+            <element signature="n#!!doc;n#OP#0;n#Calc#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -261,16 +317,6 @@
         <state relative-caret-position="154">
           <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2899">
-          <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-          <folding>
-            <element signature="e#917#991#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
