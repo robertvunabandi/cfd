@@ -127,7 +127,7 @@ class Calc {
         }
     }
   }
-
+  
   static getResultingDisplay(display, input) {
     let resulting_display = '';
     if (Calc._isDecimalPointInput(input)) {
