@@ -186,8 +186,13 @@ class Calc {
         this._setToBaseState();
         return;
       case Calc.STATE.TRANSITION_FROM_INITIAL:
-        this.__FIRST = '0';
-        this.__STATE = Calc.STATE.INITIAL;
+        if (this.__FIRST !== '0') {
+          this.__STATE = Calc.STATE.INITIAL;
+          this.__FIRST = '0';
+        } else {
+          this._setToBaseState();
+        }
+
         break;
       default:
         this.__FIRST = '0';
@@ -319,6 +324,7 @@ class Calc {
     };
   }
 
+  /** I chose an arbitrary number here */
   static get NUMBERS() {
     return {
       '0': Calc.VALID,
