@@ -2,12 +2,29 @@
 
 // COLOR is for the country
 let chosen_event_name;
+let COLOR_MAP = {};
 let COLOR = { red: 57, green: 120, blue: 170 };
 
 window.addEventListener("load", main);
 
 function main() {
+  createColorMap();
   initializeMapOnDocument();
+}
+
+function createColorMap() {
+  Object.values(COUNTRY_DATA).forEach(function (key) {
+    COLOR_MAP[key] = generateRandomColor();
+  });
+}
+
+function generateRandomColor() {
+  // return { red: 57, green: 120, blue: 170 };
+  return {red: createRandomColor(), green: createRandomColor(), blue: createRandomColor()};
+}
+
+function createRandomColor() {
+  return Math.round(Math.random() * 80) + Math.round(Math.random() * 1) + 10;
 }
 
 function initializeMapOnDocument() {
@@ -25,6 +42,14 @@ function colorMapCountries() {
   });
 }
 
+/** this methods allows one to select events to display
+ * on the map. first, this method loads all the events,
+ * using firebaseHelper.loadAllEventNames, then once the
+ * events are loaded, we change the variable chosen_event_name
+ * to be the event that's currently on the select element.
+ * Then, take a look at "event_selection.addEventListener("change",..."
+ * whenever the event changes, we reload the map with displayMapEvent()
+ * */
 function addEventSelectionOnBodyThenLoadMap() {
   let event_selection = document.getElementById("event-selected");
   let event_deletion_selection =  document.getElementById("event-selected-delete");
@@ -35,7 +60,8 @@ function addEventSelectionOnBodyThenLoadMap() {
   while (event_deletion_selection.children.length > 0) {
     event_deletion_selection.removeChild(event_deletion_selection.children[0]);
   }
-  // load the new event names then append them
+  // load the new event names then append them to
+  // the list of options to select events from
   firebaseHelper.loadAllEventNames(function (events, is_error) {
     if (is_error) {
       console.error(events);
@@ -59,6 +85,7 @@ function addEventSelectionOnBodyThenLoadMap() {
       displayMapEvent();
     });
 
+    // set the event to be whatever is currently on the value
     chosen_event_name = event_selection.value;
     displayMapEvent();
   });
@@ -80,6 +107,8 @@ function loadMapDataAndListen(event_name) {
   firebaseHelper.loadEventWithListener(event_name, populateMapFromData);
 }
 
+/** the following function is the callback that gets called
+ * once firebase has loaded all the data from the chosen event */
 function populateMapFromData(map_data, is_error) {
   if (is_error) {
     console.error("AN ERROR OCCURRED:");
@@ -114,13 +143,19 @@ function setOpacitiesFromMap(map_data, max_count) {
     // make sure that the opacity of a country has a
     // a minimum opacity of 0.05
     let opacity = Math.max(country_count / max_count, 0.05);
-    fillPathAndAddHoverEventListener(path, opacity);
+    fillPathAndAddHoverEventListener(path, opacity, country_code);
   });
 }
 
-function fillPathAndAddHoverEventListener(path, opacity) {
-  let regular_color = buildRGBAColor(COLOR.red, COLOR.green, COLOR.blue, opacity);
-  let hover_color = buildRGBAColor(COLOR.red, COLOR.green, COLOR.blue, 2.3 * opacity);
+function fillPathAndAddHoverEventListener(path, opacity, country_code) {
+  let regular_color = buildRGBAColor(
+    COLOR_MAP[country_code].red,
+    COLOR_MAP[country_code].green,
+    COLOR_MAP[country_code].blue, opacity);
+  let hover_color = buildRGBAColor(
+    COLOR_MAP[country_code].red,
+    COLOR_MAP[country_code].green,
+    COLOR_MAP[country_code].blue, 2.3 * opacity);
   path.style.fill = regular_color;
   // this is an arrow function, similar to python's "lambda"
   path.addEventListener("mouseenter", () => path.style.fill = hover_color);
@@ -143,6 +178,9 @@ function makeItPossibleToCreateEvents() {
   });
 }
 
+/** I made this method simply check if the name of the event
+ * is longer than 2 characters. You can make this more complex
+ * by making sure it's not a duplicate event or whatever you want. */
 function isValidEventName(event) {
   return event.length >= 3;
 }

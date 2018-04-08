@@ -113,6 +113,7 @@ function addEventSelection() {
   text_choose_event_span.appendChild(text_choose_event);
   event_selection_box.appendChild(text_choose_event_span);
 
+  // create the HTML select box, from this select box, we can choose events
   const event_selection = document.createElement("select");
   firebaseHelper.loadAllEventNames(function (events, is_error) {
     if (is_error) {
@@ -120,6 +121,7 @@ function addEventSelection() {
       return;
     }
     event_list = events;
+    // for each event, we append an "option" item to the "select" element
     events.forEach(function (event_name_received) {
       let option = document.createElement("option");
       option.value = event_name_received;
@@ -127,9 +129,16 @@ function addEventSelection() {
       event_selection.appendChild(option);
     });
 
+    // whenever the user selects a different event, this method changes
+    // the value of the event name. there is no need to reload anything
+    // in this case. Note that event_name is used when adding country
+    // to the event
     event_selection.addEventListener("change", function () {
       event_name = event_selection.value;
     });
+
+    // set the event name to be the event displayed on the event select
+    // box with event_selection.value;
     event_name = event_selection.value;
 
     event_selection_box.appendChild(event_selection);
